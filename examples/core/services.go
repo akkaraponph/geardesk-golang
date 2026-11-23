@@ -2,9 +2,9 @@ package core
 
 import (
 	"errors"
-	"go-hexagonal-example/filters"
+	"go-hexagonal-example/examples/filters"
 
-	"go-hexagonal-example/pkg/pagination"
+	"go-hexagonal-example/examples/pkg/pagination"
 )
 
 type (

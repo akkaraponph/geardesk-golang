@@ -23,6 +23,7 @@ go.work
 # Local configuration and generated SQLite databases
 .env
 *.db
+!pagi-sample.db
 *.db-shm
 *.db-wal
 

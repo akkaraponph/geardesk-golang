@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"go-hexagonal-example/core"
-	"go-hexagonal-example/db"
-	"go-hexagonal-example/utils"
+	"go-hexagonal-example/examples/core"
+	"go-hexagonal-example/examples/db"
+	"go-hexagonal-example/examples/utils"
 	"log"
 )
 

@@ -1,13 +1,13 @@
 # go-hexagonal-example
 
-A small Go REST API example built with Fiber, GORM, and SQLite. It exposes a todo listing endpoint and organizes handlers, services, and repositories in separate packages.
+A small Go REST API example in `examples/` built with Fiber, GORM, and SQLite. It exposes a todo listing endpoint and organizes handlers, services, and repositories in separate packages.
 
 ## Run locally
 
 1. Install Go 1.27.4 or a compatible newer Go release.
-2. Copy `env-sample` to `.env` and choose an available `APP_PORT` (the sample uses port 80).
-3. Start the server with `go run .`.
-4. Open `http://localhost:<APP_PORT>/` to call the todo listing endpoint. Query parameters can filter and paginate results; see `core/handlers.go` and `utils/pagination.go` for the supported fields.
+2. From `examples/`, copy `env-sample` to `.env` and choose an available `APP_PORT` (the sample uses port 80).
+3. From `examples/`, start the server with `go run .`.
+4. Open `http://localhost:<APP_PORT>/` to call the todo listing endpoint. Query parameters can filter and paginate results; see `examples/core/handlers.go` and `examples/utils/pagination.go` for the supported fields.
 
 Useful development commands:
 

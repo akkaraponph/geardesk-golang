@@ -1,10 +1,10 @@
 package core
 
 import (
-	"go-hexagonal-example/filters"
-	"go-hexagonal-example/models"
+	"go-hexagonal-example/examples/filters"
+	"go-hexagonal-example/examples/models"
 
-	"go-hexagonal-example/pkg/pagination"
+	"go-hexagonal-example/examples/pkg/pagination"
 	"gorm.io/gorm"
 )
 

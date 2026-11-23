@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/gofiber/fiber/v2"
-	"go-hexagonal-example/pkg/pagination"
+	"go-hexagonal-example/examples/pkg/pagination"
 )
 
 type PaginationResponse struct {

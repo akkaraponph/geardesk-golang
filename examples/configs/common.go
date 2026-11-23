@@ -1,6 +1,6 @@
 package configs
 
-import "go-hexagonal-example/pkg/pagination"
+import "go-hexagonal-example/examples/pkg/pagination"
 
 type PagingResponse[T interface{}] struct {
 	Code          int                      `json:"code"`

@@ -1,11 +1,11 @@
 package core
 
 import (
-	"go-hexagonal-example/filters"
-	"go-hexagonal-example/utils"
+	"go-hexagonal-example/examples/filters"
+	"go-hexagonal-example/examples/utils"
 
 	"github.com/gofiber/fiber/v2"
-	"go-hexagonal-example/pkg/pagination"
+	"go-hexagonal-example/examples/pkg/pagination"
 )
 
 type (

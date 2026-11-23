@@ -2,8 +2,8 @@ package db
 
 import (
 	"fmt"
-	"go-hexagonal-example/configs"
-	"go-hexagonal-example/models"
+	"go-hexagonal-example/examples/configs"
+	"go-hexagonal-example/examples/models"
 	"log"
 
 	"gorm.io/driver/sqlite"

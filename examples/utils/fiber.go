@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"go-hexagonal-example/configs"
+	"go-hexagonal-example/examples/configs"
 	"log"
 	"strings"
 
