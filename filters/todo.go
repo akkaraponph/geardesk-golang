@@ -1,9 +1,9 @@
 package filters
 
-import "github.com/rapidstellar/pagi"
+import "go-hexagonal-example/pkg/pagination"
 
 type FTodo struct {
 	Title  string `json:"title"`
 	Detail string `json:"detail"`
-	pagi.CommonTimeFilters
+	pagination.CommonTimeFilters
 }

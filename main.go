@@ -6,14 +6,9 @@ import (
 	"go-hexagonal-example/db"
 	"go-hexagonal-example/utils"
 	"log"
-
 )
 
 func main() {
-	// _ = pagi.Paginate[interface{}]()
-	// paging
-	fmt.Println(goease.ToLowerCase("Hello"))
-
 	param := utils.ProvideFiberHttpServiceParams()
 	fiberSrv := utils.InitializeHTTPService(param)
 

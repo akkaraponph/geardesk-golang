@@ -1,12 +1,11 @@
 package configs
 
-import "github.com/rapidstellar/pagi"
+import "go-hexagonal-example/pkg/pagination"
 
 type PagingResponse[T interface{}] struct {
-	Code          int                `json:"code"`
-	StatusCode    int                `json:"status_code"`
-	StatusMessage string             `json:"status_message"`
-	Data          interface{}        `json:"data"`
-	Pagination    pagi.PagingInfo[T] `json:"pagination"`
+	Code          int                      `json:"code"`
+	StatusCode    int                      `json:"status_code"`
+	StatusMessage string                   `json:"status_message"`
+	Data          interface{}              `json:"data"`
+	Pagination    pagination.PagingInfo[T] `json:"pagination"`
 }
-

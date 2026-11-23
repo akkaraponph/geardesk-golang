@@ -4,12 +4,12 @@ import (
 	"errors"
 	"go-hexagonal-example/filters"
 
-	"github.com/rapidstellar/pagi"
+	"go-hexagonal-example/pkg/pagination"
 )
 
 type (
 	ISrvInfs interface {
-		GetTodoes(p pagi.PagingParams[filters.FTodo]) (pagi.PagingInfo[[]TodoDto], error)
+		GetTodoes(p pagination.PagingParams[filters.FTodo]) (pagination.PagingInfo[[]TodoDto], error)
 	}
 	srvDeps struct {
 		todoRepo IRepoInfs
@@ -25,14 +25,14 @@ func NewServices(
 }
 
 // GetTodoes implements ISrvInfs.
-func (s *srvDeps) GetTodoes(p pagi.PagingParams[filters.FTodo]) (pagi.PagingInfo[[]TodoDto], error) {
+func (s *srvDeps) GetTodoes(p pagination.PagingParams[filters.FTodo]) (pagination.PagingInfo[[]TodoDto], error) {
 	pgR, err := s.todoRepo.GetTodoes(p)
 	if err != nil {
-		return pagi.PagingInfo[[]TodoDto]{}, err
+		return pagination.PagingInfo[[]TodoDto]{}, err
 	}
 	if pgR == nil {
 		err := errors.New("no data found")
-		return pagi.PagingInfo[[]TodoDto]{}, err
+		return pagination.PagingInfo[[]TodoDto]{}, err
 	}
 
 	var resp []TodoDto
@@ -46,7 +46,7 @@ func (s *srvDeps) GetTodoes(p pagi.PagingParams[filters.FTodo]) (pagi.PagingInfo
 		})
 	}
 
-	return pagi.PagingInfo[[]TodoDto]{
+	return pagination.PagingInfo[[]TodoDto]{
 		Links:      pgR.Links,
 		Total:      pgR.Total,
 		Page:       pgR.Page,

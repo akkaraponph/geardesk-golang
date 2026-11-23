@@ -4,8 +4,8 @@ import (
 	"go-hexagonal-example/filters"
 	"go-hexagonal-example/utils"
 
-	"github.com/rapidstellar/pagi"
 	"github.com/gofiber/fiber/v2"
+	"go-hexagonal-example/pkg/pagination"
 )
 
 type (
@@ -31,7 +31,7 @@ func (h *handlerDeps) HandleGetTodoes(c *fiber.Ctx) error {
 	p.Filters = filters.FTodo{
 		Title:  c.Query("title"),
 		Detail: c.Query("detail"),
-		CommonTimeFilters: pagi.CommonTimeFilters{
+		CommonTimeFilters: pagination.CommonTimeFilters{
 			DateField:     c.Query("date_field"),
 			CreatedAfter:  c.Query("created_after"),
 			UpdatedAfter:  c.Query("updated_after"),
