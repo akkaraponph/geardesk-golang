@@ -1,6 +1,6 @@
 module go-hexagonal-example
 
-go 1.22.2
+go 1.27.4
 
 require (
 	github.com/gofiber/fiber/v2 v2.52.4
