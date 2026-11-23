@@ -19,3 +19,25 @@
 
 # Go workspace file
 go.work
+
+# Local configuration and generated SQLite databases
+.env
+*.db
+*.db-shm
+*.db-wal
+
+# Agent setup metadata
+.panda-suite/
+
+# Third-party coding agent state
+.aider*
+.claude/
+.cline/
+.continue/
+.cursor/
+.gemini/
+.kiro/
+.roo/
+.windsurf/
+
+.panda-suite
